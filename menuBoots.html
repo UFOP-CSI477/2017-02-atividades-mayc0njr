@@ -1,0 +1,126 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="utf-8">
+    <title>Menu Grid</title>
+    
+    <style type="text/css">
+        
+        div.estatico {
+            position: static;
+            border: 5px solid #56addf;
+        }
+        
+        div.relativo{
+            position: relative;
+            left: 50px;
+            top: 10px;
+            border: 5px solid #56addf;
+        }
+        
+        div.fixo{
+            position: fixed;
+            bottom: 0;
+            right: 0;
+            width: 200px;
+            border: 5px solid #56addf;
+        }
+        
+        div.absoluto{
+            position: absolute;
+            top: 200px;
+            right: 0px;
+            width: 200px;
+            border: 2px solid #56addf;
+        }
+        
+        div.teste{
+            position: absolute;
+            top: 350px;
+            right: 10px;
+            width: 440px;
+            border: 5px solid #56addf;
+        }
+        
+        div.user{
+            position: absolute;
+            top: 300px;
+            right: 10px;
+            width: 440px;
+            border: 5px solid #56addf;
+        }
+        
+        div.tab{
+            position: absolute;
+            top: 300px;
+            left: 30px;
+            width: 200px;
+            border: 3px solid #56addf;
+        }
+        
+        div.log{
+            position: absolute;
+            top: 400px;
+            right: 40px;
+            width: 200px;
+        }
+    </style>
+    <link rel="stylesheet" type="text/css"
+        href="lib/bootstrap 3.3.7/css/bootstrap.css">
+    <link rel="stylesheet" type="text/css"
+    href="estilos.css" />
+    
+</head>
+<body>
+    
+    <!-- MENU INICIAL -->
+    
+    <div class="absoluto">
+        <a href="form.html">Cadastro</a>
+    </div>
+    
+    <div class="tab">
+        <a href="tabela.html">Lista</a>
+    </div>
+    
+    <div class="user">
+        <label class="control-label col-sm-2" for="pwd">Usuário:</label>
+        <div class="col-sm-10">
+            <input type="email" class="form-control" id="user">
+        </div>
+    </div>
+    
+    <div class="teste">
+        <label class="control-label col-sm-2" for="pwd">Senha:</label>
+        <div class="col-sm-10">
+            <input type="password" class="form-control" id="pass">
+        </div>
+    </div>
+    
+    <div class="log">
+        <button type="submit" class="btn btn-success">Entrar</button>
+    </div>
+    
+    <font face="Times New Roman"><h1>Editor</h1></font>
+    
+    <table class="table table-striped">
+        
+        <tr>
+            <th>Matrícula</th>
+            <th>Nome</th>
+            <th>E-mail</th>
+            <th>Aplicação</th>
+        </tr>
+        
+        <tr>
+            <td>14.1.8151</td>
+            <td>Maycon</td>
+            <td>123@oliveira.4</td>
+            <td>StudentRegister</th>
+            </tr>
+            
+        </table>
+        
+        
+    </body>
+    </html>

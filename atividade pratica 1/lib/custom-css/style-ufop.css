@@ -1,0 +1,35 @@
+body{
+    margin: 0px;
+    padding: 0px;
+}
+
+header{
+    background-color: #7f0000;
+    width: 100%;
+    z-index: 1001;
+}
+img.displayed{
+    display: block;
+    margin-left: auto;
+    margin-right: auto;
+}
+.grad {
+    background: #5d1312; /* For browsers that do not support gradients */
+    background: -webkit-linear-gradient(#350b0c, #7b1918); /* For Safari 5.1 to 6.0 */
+    background: -o-linear-gradient(#350b0c, #7b1918); /* For Opera 11.1 to 12.0 */
+    background: -moz-linear-gradient(#350b0c, #7b1918); /* For Firefox 3.6 to 15 */
+    background: linear-gradient(#350b0c, #7b1918); /* Standard syntax */
+    background-image: url("../../src/ufopbgsample.jpg");
+    background-repeat: repeat-x;
+}
+
+footer{
+    bottom: 0;
+    width: 100%;
+    height: 119px;
+    margin-left: 150px;
+    z-index: 1001;
+    color: #ffffff;
+    background-image: url("../../src/ufopbgsample.jpg");
+    background-repeat: repeat-x;
+}
