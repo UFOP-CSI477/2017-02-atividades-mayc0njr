@@ -59,12 +59,17 @@ a:hover{
     grid-area: content;
 }
 
+.contato-content{
+    background: #FFFFFF;
+    grid-area: content;
+}
+
 .web-grid{
     display: grid;
     width: 100vw;
     height: 100vh;
     grid-template-columns: 150px auto;
-    grid-template-rows: 119px auto 100px;
+    grid-template-rows: 119px auto 80px;
     grid-template-areas:
         'header header'
         'side-menu content'
@@ -82,7 +87,7 @@ tr.header {
 }
 
 tr.highlighted {
-    background: #3F7FFF !important;
+    background: #5F9FFF !important;
     font-family: "Times New Roman", Times, serif;
     color: #FFFFFF;
     font-weight: bold;
@@ -92,9 +97,53 @@ tr.highlighted {
     margin-left: 10px;
     margin-right: 10px;
 }
+.margin-vt-md{
+    margin-top: 10px;
+    margin-bottom: 10px;
+}
+.padding-hz-md{
+    padding-left: 10px;
+    padding-right: 10px;
+}
+.padding-vt-md{
+    padding-top: 10px;
+    padding-bottom: 10px;
+}
 
 img.displayed{
     display: block;
     margin-left: auto;
     margin-right: auto;
+}
+
+#contatoInput{
+    background: #9FCFFF;
+    width: 300px;
+    box-sizing: content-box;
+}
+
+#commentArea{
+    height: 100px;
+}
+
+#contatoInput label{
+    margin: 0px;
+    display: inline-block;
+    font-family: Arial, sans-serif;
+    width: 200px;
+}
+
+#contatoInput input[type="text"], #contatoInput textarea{
+    background: #DFEFFF;
+    border: #5F9FDF solid 1px;
+    font-family: "Times New Roman", Times, serif;
+    font-size: 1em;
+    display: block;
+    padding: 5px;
+    margin-bottom: 10px;
+    width: 300px;
+}
+
+.sm-field{
+    height: 40px;
 }

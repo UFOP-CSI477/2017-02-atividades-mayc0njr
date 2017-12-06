@@ -1,0 +1,109 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <link rel="stylesheet" href="./lib/bootstrap 3.3.7/css/bootstrap.css">
+    <link rel="stylesheet" href="./lib/custom-css/grid-layout.css">
+    <title>Document</title>
+</head>
+<body>
+    <div class="web-grid">
+            <header class="box header">
+                <img src="src/ufoplogo.jpg" alt="UFOP LOGO" class="displayed">
+            </header>
+            <div class="box side-menu">
+                <a href="cadastro.html">
+                <div class="menu-item">
+                    Cadastro
+                </div></a>
+                <a href="matricula.html">
+                <div class="menu-item">
+                    Matricula
+                </div></a>
+                <a href="listaPresenca.html">
+                <div class="menu-item">
+                    Presença
+                </div></a>
+                <a href="tabela.html">
+                <div class="menu-item">
+                    Tabela
+                </div></a>
+                <a href="contato.html">
+                <div class="menu-item">
+                    Contato
+                </div></a>
+            </div>
+            <div class="content">
+                <form action="sucessoMatricula.html" method="post" class="padding-hz-md padding-vt-md form-inline">
+                    <div class="col-sm-1"></div>
+                    <div class="col-sm-2">
+                            <div class="row sm-field">
+                                <label for="semestre" class="pull-left">Ano/Semestre:</label>
+                            </div>
+                            <div class="row sm-field">
+                                <label for="aluno" class="pull-left">Aluno:</label>
+                            </div>
+                            <div class="row sm-field">
+                                <label for="disciplina" class="pull-left">Disciplina:</label>
+                            </div>
+                            <div class="row sm-field">
+                                <label for="presenca" class="pull-left">Presente como:</label>
+                            </div>
+                            <div class="row sm-field">
+                                <input type="submit" value="Enviar" class="btn btn-success">
+                            </div>
+                    </div>
+                    <div class="col-sm-9">
+                            <div class="row sm-field">
+                                <select name="semestre">
+                                    <option value="0">      </option>
+                                    <option value="1">2012/1</option>
+                                    <option value="2">2012/2</option>
+                                    <option value="3">2013/1</option>
+                                    <option value="4">2013/2</option>
+                                    <option value="5">2014/1</option>
+                                    <option value="6">2014/2</option>
+                                    <option value="7">2015/1</option>
+                                    <option value="8">2015/2</option>
+                                </select>
+                            </div>
+                            <div class="row sm-field">
+                                <select name="aluno">
+                                    <option value="0"> </option>
+                                    <option value="1">Ana</option>
+                                    <option value="2">Carlos</option>
+                                    <option value="3">Otavio</option>
+                                    <option value="4">Juriscleide</option>
+                                    <option value="5">Diógenes</option>
+                                    <option value="6">Astobaldo</option>
+                                    <option value="7">Godofredo</option>
+                                    <option value="8">Ananias</option>
+                                    <option value="9">Hastad</option>
+                                    <option value="10">Maycon</option>
+                                </select>
+                            </div>
+                            <div class="row sm-field">
+                                <select name="disciplina">
+                                    <option value="0"> </option>
+                                    <option value="1">Sistemas Web II</option>
+                                    <option value="2">Sistemas Distribuidos</option>
+                                    <option value="3">Sistemas Operacionais</option>
+                                    <option value="4">Sistemas de Apoio a Decisão</option>
+                                    <option value="5">Sistemas Web I</option>
+                                </select>
+                            </div>
+                            <div class="row sm-field">
+                                <input type="radio" name="presenca" value="R">Regular
+                                <input type="radio" name="presenca" value="O">Ouvinte
+                            </div>
+                            <div class="row sm-field">
+                                <input type="reset" value="Limpar" class="btn btn-danger">
+                            </div>
+                    </div>
+                </form>
+                <a href="index.html"><button class="btn btn-danger margin-vt-md margin-hz-md">Voltar</button></a>
+            </div>
+            <footer class="box footer"></footer>
+    </div>
+</body>
+</html>

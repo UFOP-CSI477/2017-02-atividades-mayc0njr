@@ -4,7 +4,7 @@
     <meta charset="UTF-8">
     <link rel="stylesheet" href="./lib/bootstrap 3.3.7/css/bootstrap.css">
     <link rel="stylesheet" href="./lib/custom-css/grid-layout.css">
-    <title>Home</title>
+    <title>Document</title>
 </head>
 <body>
     <div class="web-grid">
@@ -33,8 +33,21 @@
                     Contato
                 </div></a>
             </div>
-            <div class="box content"></div>
-            <footer class="box footer"></footer>
+            <div class="contato-content">
+                <form action="#" method="post" id="contatoInput" class="padding-hz-md padding-vt-md">
+                    <label for="name">Name </label>
+                    <input type="text" name="name">
+                    <label for="email">E-mail </label>
+                    <input type="text" name="email">
+                    <label for="site">Website </label>
+                    <input type="text" name="site">
+                    <label for="comment">Comment </label>
+                    <textarea type="text" name="comment" id="commentArea"></textarea>
+                    <input type="submit" value="Confirmar" class="btn btn-success margin-vt-md">
+                </form>
+                <a href="index.html"><button class="btn btn-danger margin-hz-md margin-vt-md">Voltar</button></a>
+            </div>
+            <footer class="footer"></footer>
     </div>
 </body>
 </html>
