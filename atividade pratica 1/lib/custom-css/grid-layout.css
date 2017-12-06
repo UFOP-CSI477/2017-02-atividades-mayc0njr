@@ -50,7 +50,7 @@ a:hover{
 }
 
 .footer{
-    background: #7F3FFF;
+    background: #5F0F0F;
     grid-area: footer;
 }
 
@@ -110,6 +110,11 @@ tr.highlighted {
     padding-bottom: 10px;
 }
 
+.padding-hz-lg{
+    padding-left: 30px;
+    padding-right: 30px;
+}
+
 img.displayed{
     display: block;
     margin-left: auto;
@@ -146,4 +151,17 @@ img.displayed{
 
 .sm-field{
     height: 40px;
+}
+
+.ufop{
+    text-align: left;
+    font-weight: 700;
+    font-size: 20px;
+    color: #FFFFFF;
+}
+.aluno{
+    text-align: right;
+    font-weight: 700;
+    font-size: 16px;
+    color: #FFFFFF;
 }
