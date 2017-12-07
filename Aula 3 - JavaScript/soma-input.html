@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="utf-8">
+	<title>Soma - Input</title>
+	<script>
+		function somar() {
+			var x = parseInt(document.dados.valor1.value);
+			var y = parseInt(document.dados.valor2.value);
+			if(document.dados.valor1.value.length == 0 || isNaN(x)) {
+				window.alert("Informe o primeiro valor corretamente!");
+				document.dados.valor1.value = "";
+				document.dados.valor1.focus();
+				return;
+			} else if(document.dados.valor2.value.length == 0 || isNaN(x)) {
+				window.alert("Informe o segundo valor corretamente!");
+				document.dados.valor2.value = "";
+				document.dados.valor2.focus();
+				return;
+			}
+			var w = x + y;
+			document.dados.resultado.value = w;
+		}
+	</script>
+</head>
+<body>
+	<form name="dados">
+		<label for="valor1">Primeiro Valor</label>
+		<input name="valor1" type="text"><br>
+
+		<label for="valor2">Segundo Valor</label>
+		<input name="valor2" type="text"><br>
+
+		<label for="resultado">Resultado</label>
+		<input name="resultado" type="text"><br><br>
+
+		<button type="button" onclick="somar()">Somar</button>
+	</form>
+</body>
+</html>
