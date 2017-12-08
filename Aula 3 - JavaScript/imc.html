@@ -1,0 +1,86 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="utf-8">
+    <link rel="stylesheet" href="../lib/bootstrap/css/bootstrap.css">
+	<title>Soma - Input</title>
+	<script>
+		var imc = function() {
+			var weight = parseFloat(document.dados.valor1.value)
+			var height = parseFloat(document.dados.valor2.value)
+			if(document.dados.valor1.value.length == 0 || isNaN(weight)) {
+				// window.alert("Informe o primeiro valor corretamente!");
+                document.getElementById("grupoV1").classList.add("has-error")
+                document.getElementById("alertaV1").style.display = "block"
+				document.dados.valor1.value = ""
+				document.dados.valor1.focus()
+				return;
+			} else if(document.dados.valor2.value.length == 0 || isNaN(height)) {
+				// window.alert("Informe o segundo valor corretamente!");
+                document.getElementById("grupoV2").classList.add("has-error")
+                document.getElementById("alertaV2").style.display = "block"
+				document.dados.valor2.value = ""
+				document.dados.valor2.focus()
+				return;
+			}
+            document.getElementById("grupoV1").classList.remove("has-error")
+            document.getElementById("grupoV2").classList.remove("has-error")
+            document.getElementById("alertaV1").style.display = "none"
+            document.getElementById("alertaV2").style.display = "none"
+			var w = calcula(weight, height)
+            w = '(' + w + ") " + tabela(w)
+			document.dados.resultado.value = w
+		}
+        var calcula = function(peso, altura){
+            return peso / Math.pow(altura, 2)
+        }
+        var tabela = function(valor) {
+            if(valor < 18.6)
+                return "abaixo do peso"
+            if(valor < 25)
+                return "peso ideal"
+            if(valor < 30)
+                return "acima do peso"
+            if(valor < 35)
+                return "obeso I"
+            if(valor < 40)
+                return "obeso II"
+            return "obeso III"
+        }
+	</script>
+</head>
+<body>
+    <div class="container">
+        <div class="jumbotron text-center">
+            <h2>CALCULAR O IMC</h1>
+        </div>
+        <form name="dados">
+            <div id="grupoV1" class="form-group">
+                <label for="valor1">Peso</label>
+                <input name="valor1" type="text" class="form-control">
+
+                <div class="alert alert-danger" style="display: none" id="alertaV1">
+                    Informe o peso corretamente.
+                </div>
+            </div>
+
+            <div id="grupoV2" class="form-group">
+                <label for="valor2">Altura</label>
+                <input name="valor2" type="text" class="form-control">
+
+                <div class="alert alert-danger" style="display: none" id="alertaV2">
+                        Informe a altura corretamente.
+                </div>
+            </div>
+
+            <div id="GrupoRes" class="form-group">
+                <label for="resultado">Resultado</label>
+                <input name="resultado" type="text" disabled="true" class="form-control">
+            </div>
+
+            <button type="button" onclick="imc()" class="btn btn-primary">Somar</button>
+            <button type="reset" class="btn btn-danger">Reset</button>
+        </form>
+    </div>
+</body>
+</html>
