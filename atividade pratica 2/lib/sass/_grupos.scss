@@ -1,0 +1,42 @@
+$neutral-color: #BFBFBF;
+$correct-color: #7FFF7F;
+$incorrect-color: #FF7F7F;
+$selected-color: #FFFF3F;
+$margin-value: 10px;
+
+@mixin border-bg-color($color){
+    background-color: $color;
+    border-color: $color;
+}
+.opt-group{
+    border: 1px solid;
+    h3{
+        text-align: center;
+        font-weight: bold;
+    }
+}
+
+.option-border{
+    border: 3px solid;
+    border-radius: 3px;
+    font-weight: bold;
+    @include border-bg-color($neutral-color);
+    img{
+        margin-left: $margin-value;
+    }
+}
+
+.correct{
+    @extend .option-border;
+    @include border-bg-color($correct-color);
+}
+
+.incorrect{
+    @extend .option-border;
+    @include border-bg-color($incorrect-color);
+}
+
+.selected{
+    @extend .option-border;
+    @include border-bg-color($selected-color);
+}

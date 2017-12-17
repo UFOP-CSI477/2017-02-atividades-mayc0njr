@@ -1,0 +1,11 @@
+@import 'grupos';
+
+$jumbo-font-size: 36px;
+
+
+.jumbotron{
+    h2{
+        font-size: $jumbo-font-size;
+        font-weight: bold;
+    }
+}
