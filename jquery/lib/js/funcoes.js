@@ -20,8 +20,12 @@ $(document).ready(() => {
 
     $("button[name='mudar']").click(()=>{
         $("#titulo").addClass("jumbotron")
-        $("button").addClass("btn btn-primary");
-        $("#links").addClass("alert alert-info");
-        $("p").removeClass("h2");
+        $("button").addClass("btn btn-primary")
+        $("#links").addClass("alert alert-info")
+        $("p").removeClass("h2")
+        $("a").toggleClass("btn btn-warning")
+        $("button[name='exibir']").text("Churro Paladar")
+        $("button[name='ocultar']").text("Churro Errante")
+        $("button[name='mudar']").text("Churro")
     });
 })
