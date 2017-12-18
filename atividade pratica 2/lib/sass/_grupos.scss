@@ -3,6 +3,8 @@ $correct-color: #7FFF7F;
 $incorrect-color: #FF7F7F;
 $selected-color: #FFFF3F;
 $margin-value: 10px;
+$margin-group: 20px;
+$element-border: 5px;
 
 @mixin border-bg-color($color){
     background-color: $color;
@@ -10,15 +12,17 @@ $margin-value: 10px;
 }
 .opt-group{
     border: 1px solid;
+    text-align: center;
+    margin-left: $margin-group;
+    margin-right: $margin-group;
     h3{
-        text-align: center;
         font-weight: bold;
     }
 }
 
 .option-border{
-    border: 3px solid;
-    border-radius: 3px;
+    border: $element-border solid;
+    border-radius: 2*$element-border;
     font-weight: bold;
     @include border-bg-color($neutral-color);
     img{
