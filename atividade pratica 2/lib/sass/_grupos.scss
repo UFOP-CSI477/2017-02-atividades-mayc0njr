@@ -2,6 +2,9 @@ $neutral-color: #BFBFBF;
 $correct-color: #7FFF7F;
 $incorrect-color: #FF7F7F;
 $selected-color: #FFFF3F;
+$opt-color: #7FBFFF;
+$text-color: #000000;
+
 $margin-value: 10px;
 $margin-group: 20px;
 $element-border: 5px;
@@ -15,8 +18,18 @@ $element-border: 5px;
     text-align: center;
     margin-left: $margin-group;
     margin-right: $margin-group;
-    h3{
+    border-radius: $margin-value;
+    color: $text-color;
+    h2{
+        margin-top: $margin-value;
+        margin-bottom: $margin-value;
         font-weight: bold;
+        @include border-bg-color($opt-color);
+    }
+    h3{
+        margin-top: $margin-value;
+        margin-bottom: $margin-value;
+        @include border-bg-color($opt-color);
     }
 }
 
@@ -24,6 +37,7 @@ $element-border: 5px;
     border: $element-border solid;
     border-radius: 2*$element-border;
     font-weight: bold;
+    color: $text-color;
     @include border-bg-color($neutral-color);
     img{
         margin-left: $margin-value;
