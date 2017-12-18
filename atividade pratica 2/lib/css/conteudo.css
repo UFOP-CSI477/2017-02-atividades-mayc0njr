@@ -9,8 +9,8 @@
     margin-top: 10px;
     margin-bottom: 10px;
     font-weight: bold;
-    background-color: #7FBFFF;
-    border-color: #7FBFFF; }
+    background-color: #FFFF3F;
+    border-color: #FFFF3F; }
   .opt-group h3 {
     margin-top: 10px;
     margin-bottom: 10px;
@@ -38,6 +38,64 @@
 .selected {
   background-color: #FFFF3F;
   border-color: #FFFF3F; }
+
+.figure-name, .yellow-name, .blue-name, .purple-name, .orange-name {
+  border-radius: 10px;
+  height: 128px;
+  line-height: 128px;
+  font-weight: bold;
+  font-size: 24px;
+  background-color: #BFBFBF;
+  border-color: #BFBFBF; }
+
+.yellow-name {
+  background-color: #FFFF3F;
+  border-color: #FFFF3F; }
+
+.blue-name {
+  background-color: #7FBFFF;
+  border-color: #7FBFFF; }
+
+.purple-name {
+  background-color: #BF7FBF;
+  border-color: #BF7FBF; }
+
+.orange-name {
+  background-color: #FF7F3F;
+  border-color: #FF7F3F; }
+
+.figure-icon, .yellow-icon, .blue-icon, .purple-icon, .orange-icon {
+  border: 10px solid;
+  border-radius: 10px;
+  background-color: #BFBFBF;
+  border-color: #BFBFBF; }
+
+.yellow-icon {
+  background-color: #FFFF3F;
+  border-color: #FFFF3F; }
+
+.blue-icon {
+  background-color: #7FBFFF;
+  border-color: #7FBFFF; }
+
+.purple-icon {
+  background-color: #BF7FBF;
+  border-color: #BF7FBF; }
+
+.orange-icon {
+  background-color: #FF7F3F;
+  border-color: #FF7F3F; }
+
+.row {
+  margin-bottom: 10px;
+  text-align: center;
+  margin-left: 0;
+  margin-right: auto; }
+
+.pont {
+  border: 1px solid;
+  font-weight: bold;
+  padding: 3px; }
 
 .jumbotron {
   background-color: #FFBF7F;

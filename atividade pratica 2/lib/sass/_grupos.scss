@@ -3,11 +3,13 @@ $correct-color: #7FFF7F;
 $incorrect-color: #FF7F7F;
 $selected-color: #FFFF3F;
 $opt-color: #7FBFFF;
+$fgr-color1: #BF7FBF;
+$fgr-color2: #FF7F3F;
 $text-color: #000000;
-
 $margin-value: 10px;
 $margin-group: 20px;
 $element-border: 5px;
+$img-height: 128px;
 
 @mixin border-bg-color($color){
     background-color: $color;
@@ -24,7 +26,7 @@ $element-border: 5px;
         margin-top: $margin-value;
         margin-bottom: $margin-value;
         font-weight: bold;
-        @include border-bg-color($opt-color);
+        @include border-bg-color($selected-color);
     }
     h3{
         margin-top: $margin-value;
@@ -57,4 +59,68 @@ $element-border: 5px;
 .selected{
     @extend .option-border;
     @include border-bg-color($selected-color);
+}
+
+.figure-name{
+    border-radius: 2*$element-border;
+    height: $img-height;
+    line-height: $img-height;
+    font-weight: bold;
+    font-size: 24px;
+    @include border-bg-color($neutral-color);
+}
+
+.yellow-name{
+    @extend .figure-name;
+    @include border-bg-color($selected-color);
+}
+
+.blue-name{
+    @extend .figure-name;
+    @include border-bg-color($opt-color);
+}
+.purple-name{
+    @extend .figure-name;
+    @include border-bg-color($fgr-color1);
+}
+.orange-name{
+    @extend .figure-name;
+    @include border-bg-color($fgr-color2);
+}
+
+.figure-icon{
+    border: $margin-value solid;
+    border-radius: 2*$element-border;
+    @include border-bg-color($neutral-color);
+}
+
+.yellow-icon{
+    @extend .figure-icon;
+    @include border-bg-color($selected-color);
+}
+
+.blue-icon{
+    @extend .figure-icon;
+    @include border-bg-color($opt-color);
+}
+.purple-icon{
+    @extend .figure-icon;
+    @include border-bg-color($fgr-color1);
+}
+.orange-icon{
+    @extend .figure-icon;
+    @include border-bg-color($fgr-color2);
+}
+
+.row{
+    margin-bottom: $margin-value;
+    text-align: center;
+    margin-left: 0;
+    margin-right: auto;
+}
+
+.pont{
+    border: 1px solid;
+    font-weight: bold;
+    padding: 3px;
 }
