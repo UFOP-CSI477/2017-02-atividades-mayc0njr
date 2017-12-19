@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8">
+    <title>Soma - Input - CSS/Bootstrap/jQuery</title>
+    <script src="jquery-3.2.1.js"></script>
+    <link rel="stylesheet" href="..\bootstrap-3.3.7-dist\css\bootstrap.css">
+
+    <script src="form.js">
+    </script>
+
+  </head>
+  <body>
+
+    <div class="container">
+      <div class="jumbotron text-center">
+        <h2>Calcular a soma - JS/CSS-Bootstrap</h2>
+      </div>
+      <form name="dados">
+
+        <div id="grupoV1" class="form-group">
+          <label for="valor1">Primeiro valor: </label>
+          <input type="text" name="valor1" class="form-control">
+
+          <div class="alert alert-danger" style="display: none" id="alertaV1">
+            Informe o primeiro número corretamente.
+          </div>
+
+        </div>
+
+        <div id="grupoV2" class="form-group">
+          <label for="valor2">Segundo valor: </label>
+          <input type="text" name="valor2" class="form-control">
+
+          <div class="alert alert-danger" style="display: none" id="alertaV2">
+            Informe o segundo número corretamente.
+          </div>
+
+        </div>
+
+        <div id="groupRes" class="form-group">
+          <label for="resultado">Resultado: </label>
+          <input type="text" name="resultado" class="form-control" disabled="disabled">
+
+        </div>
+
+        <button type="button" name="somar" class="btn btn-primary">Somar</button>
+        <button type="reset" class="btn btn-danger">Limpar</button>
+      </form>
+    </div>
+
+
+
+  </body>
+</html>

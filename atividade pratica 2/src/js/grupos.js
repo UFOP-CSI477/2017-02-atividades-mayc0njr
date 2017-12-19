@@ -165,6 +165,12 @@ $(document).ready(function(){
     $("#ajuda2").click(() => {
         alert(ajuda2 + "\n" + ajuda4);
     });
+    
+    $(".btn-danger").click(()=>{
+        console.log("modal");
+        console.log($("#terremoto"));
+        $("#terremoto").dialog();
+    })
 })
 var group1 = function(option) {
     console.log(option.id);
