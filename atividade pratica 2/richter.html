@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <link rel="stylesheet" href="./lib/bootstrap 3.3.7/css/bootstrap.css">
+    <link rel="stylesheet" href="./src/css/grid-layout.css">
+
+    <script src="./lib/jquery/jquery-3.2.1.min.js"></script>
+    <script src="./src/js/richter.js"></script>
+    <title>Escala Richter</title>
+</head>
+<body>
+    <div class="web-grid">
+            <header class="header">
+                <img src="src/ufoplogo.jpg" alt="UFOP LOGO" class="displayed">
+            </header>
+            <div class="side-menu">
+                <a href="didatica.html">
+                <div class="menu-item">
+                    Didática
+                </div></a>
+                <a href="richter.html">
+                <div class="menu-item">
+                    Richter
+                </div></a>
+            </div>
+            <div class="content">
+                <div class="jumbotron text-center">
+                    <h2>Atividade Pratica 2</h2>
+                </div>
+                    <div class="form-horizontal col-lg-6">
+                        <label for="valor1">Amplitude</label>
+                        <input id="amplitude" name="valor1" type="text" class="form-control"><br>
+                        <label for="valor2">Variação de tempo</label>
+                        <input id="tempo" name="valor2" type="text" class="form-control"><br>
+                        <label for="result">Resultado</label>
+                        <input id="magni" name="result" type="text" disabled="true" class="form-control">
+                        <div class="alert alert-danger" style="display: none" id="alertaV1">
+                        </div>
+                        <button class="btn btn-success" id="calculate">Calcular Magnitude</button>
+                    </div>
+                    <div class="col-lg-6">
+                        <img src="src/richter.gif" alt="ESCALA RICHTER" style="margin-bottom: 25px">
+                        <img src="https://media1.tenor.com/images/8b1cb7abbd4eea95ee61219fea002763/tenor.gif" alt="Earthquake" style="margin-bottom: 25px">
+                    </div>
+            </div>
+            <footer class="footer">
+                <div class="col-sm-6 ufop">UNIVERSIDADE FEDERAL DE OURO PRETO</div>
+                <div class="col-sm-6 aluno padding-hz-lg">
+                        Maycon Junior de Souza Miranda<br>
+                        13.1.8143<br>
+                        mayconjr_@live.com
+                </div>
+            </footer>
+    </div>
+</body>
+</html>
