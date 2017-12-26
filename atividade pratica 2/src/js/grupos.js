@@ -15,6 +15,14 @@ var alertGrupos = "Voce nao escolheu um objeto em todos os grupos.";
 var alertFiguras = "Voce nao relacionou todas as figuras.";
 var msgPont = "Sua pontuação foi "
 
+
+var playAudio = function(audio){
+    if (audio.paused) {
+        audio.play();
+    }else{
+        audio.currentTime = 0
+    }
+}
 Array.prototype.pushIfNotExist = function(element) { 
     if (this.indexOf(element) == -1) {
         this.push(element);
@@ -28,6 +36,8 @@ $(document).ready(function(){
     var items = []
     var sel1, sel2, sel3; //selecteds
     var cor1 = "sabao"; var cor2 = "algodao"; var cor3 = "maquina"; //corrects
+    var bc1 = false, bc2 = false, bc3 = false; //boolean selecionados.
+    var faustao = $("#faustao")[0];
     var pontos = 0;
     //cores.
     var isName = true;
@@ -38,9 +48,13 @@ $(document).ready(function(){
     var icc = [];//usados para colorir certo/errado
     var nmc = []; 
     var pos_atual = 0;
+    var last_name; //usado para saber o ultimo selecionado e exibir o som ERROU.
     //verifica se o resultado ja foi calculado.
     var jaCalc = false;
     $(".clickable-g1").click((event) =>{
+        if(bc1)
+            return
+        bc1 = true
         var itm = event.target.name == undefined ? event.target.id : event.target.name;
         items.pushIfNotExist(itm);
         if(sel1 != undefined){
@@ -49,11 +63,16 @@ $(document).ready(function(){
         }
         sel1 = document.getElementById(itm);
         sel1.classList.add("selected");
+        if(sel1.id != cor1)
+            playAudio(faustao);
         console.log("event: " + event);
         console.log(items);
     })
 
     $(".clickable-g2").click((event) =>{
+        if(bc2)
+            return
+        bc2 = true
         var itm = event.target.name == undefined ? event.target.id : event.target.name;
         items.pushIfNotExist(itm);
         if(sel2 != undefined){
@@ -62,11 +81,16 @@ $(document).ready(function(){
         }
         sel2 = document.getElementById(itm);
         sel2.classList.add("selected");
+        if(sel2.id != cor2)
+            playAudio(faustao);
         console.log("event: " + event);
         console.log(items);
     })
 
     $(".clickable-g3").click((event) =>{
+        if(bc3)
+            return
+        bc3 = true
         var itm = event.target.name == undefined ? event.target.id : event.target.name;
         items.pushIfNotExist(itm);
         if(sel3 != undefined){
@@ -75,6 +99,8 @@ $(document).ready(function(){
         }
         sel3 = document.getElementById(itm);
         sel3.classList.add("selected");
+        if(sel3.id != cor3)
+            playAudio(faustao);
         console.log("event: " + event);
         console.log(items);
     })
@@ -95,6 +121,7 @@ $(document).ready(function(){
         nmc[pos_atual] = event.target;
         isName = false;
         console.log(names, pos_atual);
+        last_name = event.target.id;
         
     });
 
@@ -114,6 +141,8 @@ $(document).ready(function(){
         isName = true;
         console.log(icons, pos_atual);
         pos_atual++;
+        if(event.target.name != last_name)
+            playAudio(faustao);
     });
 
     $("#resultado").click(() =>{
