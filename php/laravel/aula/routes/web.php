@@ -22,3 +22,5 @@ Route::get('/', function(){
 Route::get('/listar', 'AlunoController@listar');
 
 Route::resource('/estados', 'EstadoController');
+
+Route::resource('/cidades', 'CidadeController');

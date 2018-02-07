@@ -14,7 +14,8 @@ class CidadeController extends Controller
      */
     public function index()
     {
-        //
+        $cidades = Cidade::orderBy('nome')->get();
+        return view('cidades.index')->with('cidades', $cidades);
     }
 
     /**
@@ -24,7 +25,8 @@ class CidadeController extends Controller
      */
     public function create()
     {
-        //
+        $estados = Estado::orderBy('nome')->get();
+        return view('cidades.create')->with('estados',$estados);
     }
 
     /**

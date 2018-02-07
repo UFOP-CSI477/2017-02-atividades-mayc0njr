@@ -1,0 +1,3 @@
+Aluno: Maycon Junior de Souza Miranda
+PHP: PHP 7.0.22-0ubuntu0.16.04.1 (cli) ( NTS )
+Banco de Dados: mysql  Ver 15.1 Distrib 10.2.12-MariaDB, for debian-linux-gnu (x86_64) using readline 5.2
